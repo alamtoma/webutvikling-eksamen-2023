@@ -1,0 +1,124 @@
+/* Importerer Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+
+/* Generelle stiler */
+body {
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 1600px;
+    margin: 0 auto; /* Sentrerer siden */
+}
+
+/* Header-stiler */
+header {
+    background-image: url('header-background.jpg'); /* Bytt ut med den faktiske bildefilen */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
+    padding: 1em;
+    position: relative;
+    text-align: center;
+}
+
+#logo-container img {
+    width: 100px; /* Juster størrelsen etter behov */
+    height: auto;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav li {
+    margin-right: 1em;
+}
+
+#social-icons a {
+    color: white;
+    margin-right: 10px;
+    font-size: 20px;
+}
+
+/* Seksjonsstiler */
+section {
+    margin: 20px;
+}
+
+/* Footer-stiler */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1em;
+}
+
+footer a {
+    color: white;
+}
+
+footer a:hover {
+    text-decoration: underline; /* Underline on hover */
+}
+
+/* Media Queries for responsivitet */
+@media screen and (min-width: 600px) {
+    /* To kolonner ved desktop */
+    nav ul {
+        flex-direction: row;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    /* Tre kolonner ved større desktop */
+    nav ul {
+        flex-direction: row;
+    }
+
+    /* Endringer i gridet */
+    .grid-container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+    }
+}
+
+/* Portfolio-stiler med Flexbox */
+.portfolio-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.portfolio-card {
+    flex-grow: 1;
+    max-width: 692px;
+    margin-bottom: 20px;
+}
+
+/* Mobile layout */
+@media screen and (max-width: 767px) {
+    nav ul {
+        flex-direction: column;
+    }
+
+    /* Endringer i gridet ved mobil */
+    .grid-container {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    /* Sett flex-grow til 0 for å hindre at kortene blir for store */
+    .portfolio-card {
+        flex-grow: 0;
+    }
+}
