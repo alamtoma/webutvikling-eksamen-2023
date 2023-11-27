@@ -1,0 +1,583 @@
+body{
+    grid-template-rows: auto;
+    margin: 1px auto; /* Center the page content and set top and bottom margin */
+    font-family: Arial, sans-serif;
+    font-weight: 1px;
+
+}
+body {
+    display: grid;
+    margin: 0;
+    grid-template-areas:
+        "nav"
+        "header"
+        "main"
+        "section"
+        "aside"
+        "mark"
+        "footer";   
+      
+        
+}
+@media screen and (min-width: 693px) and (max-width: 1600px) {
+
+body {
+    display: grid;
+    margin: 0;
+    grid-template-areas:
+        "nav"
+        "header"
+        "main"
+        "section"
+        "aside"
+        "mark"
+        "footer";   
+      
+        
+}
+/* ..........alle nav element...............*/
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+
+nav ul a {
+    text-decoration: none;
+    padding: 5px;
+    color: black;
+}
+.logo {
+    margin-right: auto; /* Push the logo to the left */
+}
+
+.logo img {
+    max-width: 75px;
+    height: auto;
+}
+.menu-item,
+.product-item,
+.about-item,
+.hover-effect-nav {
+                 margin-left: 0px;
+
+}
+
+nav a.active::after{
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 2px; /* Set the thickness of the underline */
+    background-color: yellow; /* Set the color of the underline */
+    bottom: 0;
+    left: 0;
+
+}
+nav a.active {
+    font-weight: bold;
+    position: relative;
+}
+.hover-effect-nav a {
+    text-decoration: none;
+    color: white;
+    background-color: #e6bd43; /* Set background color to gold for the Contact item */
+    padding: 10px 15px;
+    border-radius: 5px; /* Add rounded corners for the button */
+    transition: background-color 0.3s ease; /* Add a smooth transition effect */
+}
+
+.hover-effect-nav a:hover {
+    background-color: yellow; /* Change background color on hover */
+}
+
+
+/* ..........alle header element...............*/
+
+header{
+    grid-area: header;
+    position: relative;
+    overflow: hidden;
+    
+}
+header h1{
+    font-size: 12px;
+    font-weight: 1px;
+
+}
+ 
+header.index .video-container {
+    width: 100%;
+    height: 60vw; /* Set height to half of the viewport width */
+    overflow: hidden;
+}
+
+
+.video-container {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+/*..............alle main item.........*/
+main h1{
+    font-size: 20px;
+    font-weight: 1px;
+    margin: 10px;
+    padding-bottom: 10px;
+}
+main p{
+    margin: 20px;
+    padding-top: 20px;
+    
+}
+
+/* ...........  alle aside element ..............*/
+
+
+.service-section h1 {
+    font-size: 24px;
+}
+
+.service-section p {
+    margin-bottom: 20px;
+}
+
+.service-section.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #e6bd43; /* Gold color */
+    color: #fff;
+    text-decoration: none;
+    border: 2px solid #e6bd43; /* Gold color */
+    border-radius: 5px;
+    transition: background-color 0.3s, border-color 0.3s;
+  
+    
+}
+.aside-service {
+    grid-area: aside;
+    display: grid;
+    grid-template-rows: auto repeat(4,auto);
+    grid-template-columns: 1fr, 2fr;
+    grid-area: aside-service;
+    grid-area: 1;   
+    text-align: center;
+   
+}
+
+.folk,
+.cloud,
+.code,
+.network {
+    grid-area: 2;
+    margin:20px;
+    padding: 20px;
+    font-size: 14px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+aside h1{
+    font-size: 16px;
+    margin-top: 25px;
+    text-align: center;
+   }
+
+aside p {
+    margin-right: 5px;
+    padding: 1px;
+    margin: 1px;
+    font-size: 16px;
+    
+
+   }
+   
+ 
+   
+
+
+
+   /*.........style all footer element.........*/
+
+
+   footer {
+    background-color: #333;
+    color: white;
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img {
+    max-width: 75px;
+    height: auto;
+}
+
+.copyright {
+    font-size: 14px;
+    display: flex;
+    margin-right: 80px;  
+}
+
+.social-icons a {
+    text-decoration: none;
+    color: white;
+    font-size: 24px;
+    margin-right: 10px; /* Adjust the spacing between social media icons */
+}
+
+/* Additional styling for individual social media icons */
+.social-icons a.facebook:hover i {
+    color: #bac4d1; /* Facebook blue color */
+}
+
+.social-icons a.instagram:hover i {
+    color: #bc2a8d; /* Instagram pink color */
+}
+
+.social-icons a.linkedin:hover i {
+    color: #0077b5; /* LinkedIn blue color */
+}
+
+ }
+
+
+@media screen and (max-width: 692px) {
+    
+    body {
+        display: grid;
+        grid-template-areas:
+            "nav"
+            "header"
+            "main"
+            "section"
+            "aside"
+            "mark"
+            "footer";
+            grid-template-rows: auto;
+            padding: 2px;
+            font-family: Arial, sans-serif;
+           
+    }
+    nav {
+        text-align: center;
+        grid-area: nav;
+    }
+ 
+   header{
+    grid-area: header;
+    background-color: gray;
+   }
+    .logo {
+        margin-bottom: 10px;
+    }
+
+    nav ul {
+        list-style-type: none;
+        padding: 0;
+    }
+
+    nav li {
+        display: block;
+        margin-bottom: 10px;
+    }
+
+   nav li a {
+        text-decoration: none;
+        color: black;
+        padding: 5px;
+    }   
+
+
+ 
+
+    .video-container {
+        display: none; /* Hide the video container on smaller screens */
+    }
+
+    main {
+         grid-area: main;
+      
+        align-items: center;
+        
+    }  
+    main h1{
+        font-size: 20px;
+        font-weight: 1px;
+        margin: 10px;
+        padding-bottom: 10px;
+    }
+    main p{
+        margin: 20px;
+        padding-top: 20px;
+        
+    }
+       /*.........all section element.............. */
+       
+
+    
+      /*.........alle aside element.............. */
+
+    aside {
+        display: grid;
+        grid-template-areas: "aside-id"
+                             "folk" 
+                             "cloud" 
+                             "code" 
+                             "network";
+        grid-template-rows: auto;
+        text-align: center;
+        padding: 20px;
+
+    }
+.folk,
+.cloud,
+.code,
+.network {
+    margin-bottom: 20px;
+    font-size: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+    .aside-id{
+      grid-area:aside-id;
+      margin: 20px auto;
+      font-size: 20px; 
+      }
+    i {
+        font-size: 24px; 
+     }
+    .folk{ 
+        grid-area: folk;
+    }
+    .cloud{
+        grid-area: cloud;
+    }
+    .code{
+        grid-area: code;
+    }
+    .network{
+        grid-area: network;
+
+    }
+     /*.........alle footer element.............. */
+
+footer {
+    background-color: #333;
+    color: white;
+    padding: 20px 0;
+    display: flex;
+    flex-direction: column; /* Stack items vertically on smaller screens */
+    align-items: center;
+    text-align: center;
+}
+
+.logo img {
+    max-width: 75px;
+    height: auto;
+}
+
+.social-icons {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    margin-top: 10px; /* Add spacing between logo and social icons */
+}
+
+.social-icons a {
+    text-decoration: none;
+    color: white;
+    font-size: 24px;
+    margin-right: 10px;
+}
+
+/* Additional styling for individual social media icons */
+.social-icons a.facebook:hover i {
+    color: #d9e1eb;
+}
+
+.social-icons a.instagram:hover i {
+    color: #d9e1eb;;
+}
+
+.social-icons a.linkedin:hover i {
+    color:#d9e1eb;;
+}
+
+    
+   }
+
+   
+  
+
+/* ...........  slutt med liten skjerm element ..............*/
+  /* ...........  alle merk elementer ..............*/
+
+mark {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    background-color: grey;
+}
+
+mark h1 {
+    margin: 10px; 
+    padding: 10px;
+    text-align: center;
+    font: 1em sans-serif;
+    
+  
+
+}
+mark .email-input{
+margin-bottom: 5px;
+padding: 10px 20px;
+}
+.signup-button {
+     background-color: #e6bd43;
+    color: white;
+    padding: 10px 20px; 
+    border: none; 
+    cursor: pointer;
+   
+} 
+
+
+.header-element h1,a, p{
+    text-align:center;
+ }
+ .header-element h1{
+    font-size: 20px;
+     
+  }
+.header-element h1,a{
+    padding: 10px ;
+    margin: 10px;
+    text-align:center;
+   
+}
+.header-element {
+    display: block;
+    position: relative;
+    color: black;
+    text-align: center;      
+    font-weight: 1px;
+}
+
+.header-element p{
+
+  padding-bottom: 10px;
+    font-size: 16px;
+   
+}
+.header-element .btn {
+    background-color: #e6bd43;
+    color: black;
+    padding: 10px ;
+    margin: 20px;
+    border-radius: 5px;
+    text-decoration: none;
+   
+   
+}
+    
+  /*alle main element */
+  main{
+    text-align: center;
+    font-size: 14px;
+    padding: 10px;
+    margin: 10px;
+    font-size: 14px;
+    font-weight: 1px;
+}
+
+ /*.........all section element.............. */
+ #index-section {
+    display: flex;
+    flex-direction: column; /* Display items in a column for small screens */
+    align-items: center;
+    text-align: center;
+    background-color: #e6bd43;
+}
+
+.section-img {
+    width: 50%; /* Full width for small screens */
+    margin: 20px;
+}
+
+.section-text {
+    width: 70%; /* Full width for small screens */
+    padding: 20px;
+    text-align: left;
+    
+}
+
+.section-text h1 {
+    font-size: 24px;
+}
+
+section p {
+    margin-bottom: 20px;
+}
+
+section .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: black;
+    color: #e6bd43;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+@media screen and (min-width: 768px) {
+    #index-section {
+        flex-direction: row; /* Switch back to row layout for larger screens */
+    }
+
+    .section-img, .section-text {
+        width: 45%; 
+        text-align: center;
+    .section-text{
+        text-align: center;
+    }
+}  
+section.btn:hover {
+    background-color: #ffd700; /* Different background color on hover (e.g., yellow) */
+    border-color: #ffd700; }
+}
+/* .........Protfolie...........*/
+
+
+.product{
+    position: relative;
+    background-image: url('ressurser/background1.jpg'); /* Replace 'your-background-image.jpg' with the actual path to your background image */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* Added for a parallax effect */
+    height: 300px; /* Adjust the height as needed */
+    text-align: center;
+    color: white; /* Text color on top of the background image */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+h1 {
+    position: relative;
+    z-index: 1; /* Place the h1 tag above the background image */
+}
+
+
+
