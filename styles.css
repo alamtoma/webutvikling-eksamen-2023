@@ -207,25 +207,6 @@ section p{
 
 /*...........aside..........*/
  
-
-
-    /* ---mark design ---*/
-
-    mark {
-        grid-area: mark;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        background-color: rgb(150, 150, 140); /* Set your desired background color for the mark element */
-        padding: 10px; /* Adjust the padding as needed */
-        margin: 20px 0; /* Set top and bottom margin for spacing */
-    }
-    
-    mark h1 {
-      margin-bottom: 10px; /* Adjust the margin between h1 and the form */
-      margin-right: 15px;
-      font-size: 16px;
-    }
     
     .signup-form {
         display: flex;

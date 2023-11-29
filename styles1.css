@@ -1,24 +1,4 @@
-/* body{
-    grid-template-rows: auto;
-    margin: 1px auto; 
-    font-family: Arial, sans-serif;
-    font-weight: 1px;
 
-} */
-/* body {
-    display: grid;
-    margin: 0;
-    grid-template-areas:
-        "nav"
-        "header"
-        "main"
-        "section"
-        "aside"
-        "mark"
-        "footer";   
-      
-        
-} */
 @media screen and (min-width: 693px) and (max-width: 1600px) {
 
 body {
@@ -31,7 +11,7 @@ body {
         "main"
         "section"
         "service-section"
-        "mark"
+        "aside-form-side"
         "footer";
         grid-template-rows: auto;
         font-family: Arial, sans-serif;
@@ -39,7 +19,11 @@ body {
       
         
 }
+
+ 
 /* ..........alle nav element...............*/
+
+
 nav{ grid-area: nav;}
 nav ul {
     list-style-type: none;
@@ -153,9 +137,7 @@ section{
 .service-section{
     grid-area: service-section;
 }
-mark{
-    grid-area: mark;
-}
+
 
 /* ...........  alle aside element ..............*/
 
@@ -219,7 +201,46 @@ aside p {
 
    }
    
- 
+   .aside-form-side{
+    grid-area: aside-form-side;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(183, 183, 183);
+    align-items: center;
+    justify-content: flex-start;
+    
+}
+.aside-form-side h1 {
+    margin-bottom: 20px;
+    font: 1em sans-serif;
+}
+
+.aside-form-side form {
+    display: flex;
+    align-items: center;
+}
+
+.aside-form-side label {
+    margin-bottom: 8px;
+}
+
+.aside-form-side input {
+  flex:1;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.aside-form-side button {
+    padding: 10px;
+    background-color:#e6bd43;
+    color:black;
+    border: none;
+
+}
+
+.aside-form-side button:active {
+    font-weight: bold;
+}
    
 
 
@@ -281,13 +302,16 @@ aside p {
             "main"
             "section"
             "service-section"
-            "mark"
+            "aside-form-side"
             "footer";
             grid-template-rows: auto;
             padding: 2px;
             font-family: Arial, sans-serif;
            
     }
+
+   
+ 
     nav {
         text-align: center;
         grid-area: nav;
@@ -305,6 +329,46 @@ aside p {
  mark{
     grid-area: mark;
  }
+ .aside-form-side{
+    grid-area: aside-form-side;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(183, 183, 183);
+    align-items: center;
+    justify-content: flex-start;
+    
+}
+.aside-form-side h1 {
+    margin-bottom: 20px;
+    font: 1em sans-serif;
+}
+
+.aside-form-side form {
+    display: flex;
+    align-items: center;
+}
+
+.aside-form-side label {
+    margin-bottom: 8px;
+}
+
+.aside-form-side input {
+  flex:1;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.aside-form-side button {
+    padding: 10px;
+    background-color:#e6bd43;
+    color:black;
+    border: none;
+
+}
+
+.aside-form-side button:active {
+    font-weight: bold;
+}
  footer{
     grid-area: footer;
  }
@@ -460,37 +524,6 @@ footer {
 /* ...........  slutt med liten skjerm element ..............*/
   /* ...........  alle merk elementer ..............*/
 
-mark {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    text-align: center;
-    background-color: grey;
-}
-
-mark h1 {
-    margin: 10px; 
-    padding: 10px;
-    text-align: center;
-    font: 1em sans-serif;
-    
-  
-
-}
-mark .email-input{
-margin-bottom: 5px;
-padding: 10px 20px;
-}
-.signup-button {
-     background-color: #e6bd43;
-    color: white;
-    padding: 10px 20px; 
-    border: none; 
-    cursor: pointer;
-   
-} 
-
 
 .header-element h1,a, p{
     text-align:center;
@@ -578,7 +611,7 @@ section .btn {
     border-radius: 5px;
     transition: background-color 0.3s, border-color 0.3s;
 }
-
+/* .......liten skjermen index.html........*/
 @media screen and (min-width: 692px) {
     #index-section {
         flex-direction: row; /* Switch back to row layout for larger screens */
@@ -652,7 +685,7 @@ text-align: left;
         "service-section" /*aside*/
         "about-section"
         "contact"
-        "mark"
+        "map"
         "footer";
         grid-template-rows: auto;
         padding: 2px;
@@ -748,7 +781,7 @@ nav{ grid-area: nav;
 
 
 
- contact{
+ .contact-us-header{
     grid-area: contact;
     display: flex;
 
@@ -756,7 +789,7 @@ nav{ grid-area: nav;
 
  /* alle map design*/
  map{
-    grid-area: mark;
+    grid-area: map;
     padding: 0; 
     position: relative;
 
@@ -765,3 +798,44 @@ nav{ grid-area: nav;
     grid-area: footer;
 
  }
+
+
+
+ /*....................product.html style......*/
+
+ #product-body{
+    display: grid;
+    margin: 0;
+    grid-template-areas:
+    
+        "nav"
+        "product"
+        "main-product"
+        "branding-section"
+        "design-section"
+        "development-section"
+        "footer";
+        grid-template-rows: auto;
+        font-family: Arial, sans-serif;
+        font-weight: 1px;   
+             
+}
+nav{
+    grid-area: nav;
+}
+.product{
+    grid-area: product;
+}
+.main-product{
+    grid-area: main-product;
+}
+.branding-section{
+    grid-area: branding-section;
+
+}
+.design-section{
+    grid-area:design-section ;
+}
+.development-section{
+    grid-area:development-section ;
+}
