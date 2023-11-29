@@ -4,48 +4,226 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="styles.css">
-    <title>About Us</title>
+    <!-- <link rel="stylesheet" href="styles.css"> -->
+    <link rel="stylesheet" href="styles1.css">
+    <title>Product</title>
 </head>
-<body> 
-    <header>
-      <nav>
-         <ul>
-              <li><a href="index.html">Home</a></li>
-              <li><a href="products.html">Portfolio</a></li>  
-              <li><a href="about.html">About</a></li>          
-              <li class="hover-effect"><a href="contact-us">Contact</a></li>
-        </ul>
-        </nav>
-        <div class="logo">
-            <img src="ressurser/logo1.png" alt="Your Logo">
-        </div>
-    </header>    
-        <section>
-            <!-- Get in touch with us -->
-        <a href="about.html#contact-section">Get in touch with us</a>
+<body id="about-body">
+    <nav>
+         <ul> 
+            <li class="logo">
+                <a href="index.html">
+                   <img src="ressurser/logo1.png" alt="Your Logo" style="max-width: 75px; height: auto;">
+                </a>
+            </li>
+            <li class="menu-item"><a href="index.html">Home</a></li>
+            <li class="product-item"><a href="products.html">Portfolio</a></li>  
+            <li class="about-item"><a href="about.html">About</a></li>          
+            <li class="hover-effect-nav"><a href="contact-us">Contact</a></li>
+        </ul>      
+    </nav>
 
-            
-        </section>
+        <header id="about">
+            <articla id="article-about-header">
+                <h1> company name</h1>
+           <h2>About Our Company</h2> 
+           <p> ut accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis </p> 
+            <a href="service-section" class="hover-link">Get in touch with us</a>
+        </articla> 
+        </header> 
+      
+<!--Aside-->
+<aside id="service-section">
+    <h1 class="aside-id">Our Services</h1>        
+    <div class="aside-service">
+    <article class="folk">
+    <i class="fa-solid fa-people-line"></i> 
+     <h1>Branding</h1>
+        <p>Quis autem vel eum iure reprehenderit qui in ea voluptate</p>
+    </article>
+    <article class="cloud">
+        <i class="fa-solid fa-cloud-arrow-up"></i>
+        <h1>Branding</h1>
+        <p>Quis autem vel eum iure reprehenderit qui in ea voluptate</p>
+    </article>
+    <article class="code">
+        <i class="fa-solid fa-code"></i> 
+        <h1>Branding</h1>          
+        <p>Quis autem vel eum iure reprehenderit qui in ea voluptate</p>
+    </article>
+    <article class="network">
+        <i class="fa-sharp fa-solid fa-wifi"></i>
+        <h1>Branding</h1>            
+        <p>Quis autem vel eum iure reprehenderit qui in ea voluptate</p>
+    </article>
+   </div>
+</aside>
     
-    <!-- Tekstlig informasjon -->
-    <p>School Name</p>
-    <p>School Address</p>
-        <div class="container">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2047.188441060452!2d11.35022837689731!3d59.129247474517996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x464412f72dd0f16b%3A0x54daade2c0319210!2sH%C3%B8gskolen%20i%20%C3%98stfold%20-%20Halden!5e0!3m2!1sen!2sno!4v1700504907628!5m2!1sen!2sno" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
-            </iframe>
-        </div>
+    <!-- Some og Our client-- Section -->
+    <section id="about-section">
+        <h1 class="your-alle-Logo">some of our clients</h1>
+        
+        <img id="Your-Logo-1" src="ressurser/logo1.png" alt="Your-Logo-1" class="Your-Logo-1">
+        <img id="Your-Logo-2" src="ressurser/logo2.png" alt="Your-Logo-2" class="Your-Logo-2">
+        <img id="Your-Logo-3" src="ressurser/logo3.png" alt="Your-Logo-3" class="Your-Logo-3">
+    </section>
+     
+    
+    
+    <!--Mark Contacct us-->
+    <style>
+        contact {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+            text-align: left;
+        }
+
+        h1#contact-id {
+            font-size: 1.5em;
+            margin-bottom: 20px;
+        }
+
+        form#label-item,
+        address#address-item {
+            max-width: 400px; /* Adjust the maximum width as needed */
+            margin: 0 20px; /* Add margin to separate form and address */
+        }
+
+        form#label-item legend {
+            font-size: 1.2em;
+            margin-bottom: 10px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 8px;
+            box-sizing: border-box;
+            margin-bottom: 10px;
+        }
+
+        button {
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        address h1 {
+            font-size: 1.5em;
+            margin-bottom: 10px;
+        }
+
+        address p {
+            margin: 0;
+            margin-top: 10px;
+        }
+
+        address i {
+            margin-right: 5px;
+            margin: 10px;
+            display: block; /* Display the <i> elements as block to make them fall below each other */
+        }
+    </style>
+</head>
+<body>
+
+<contact id="contact-us-header">
+    <h1 id="contact-id">Contact Us</h1>
+
+    <div style="display: flex; justify-content: space-between; width: 100%;">
+        <form id="label-item">
+            <legend>Contact Information</legend>
+
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="subject">Subject:</label>
+            <input type="text" id="subject" name="subject" required>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+
+            <button type="button" onclick="sendMessage()">Send Message</button>
+        </form>
+
+        <address id="address-item">
+            <h1>Contact information</h1>
+            <p>Quis autem vel eum iure reprehenderit qui in ea voluptate</p>
+            <i class="fas fa-location-pin"></i> B R A Veien 4, 1757 Halden<br>
+            <i class="fas fa-phone"></i> 69608000<br>
+            <i class="fas fa-envelope"></i> <a href="mailto:postmottak@hiof.no">postmottak@hiof.no</a>
+        </address>
+    </div>
+</contact>
+
+
+<script>
+    function sendMessage() {
+        const formData = {
+            name: document.getElementById('name').value,
+            subject: document.getElementById('subject').value,
+            message: document.getElementById('message').value
+        };
+
+        console.log(formData);
+        // You can perform further actions, such as sending the data to a server using AJAX or fetching an API.
+    }
+</script>       
+   <!--Trykk knap--> 
+   <a href="#" class="back-to-top"><i class="fas fa-arrow-up"></i></a>
+   <!--Google Map-->
+   <map>
+    <div class="container">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2047.188441060452!2d11.35022837689731!3d59.129247474517996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x464412f72dd0f16b%3A0x54daade2c0319210!2sH%C3%B8gskolen%20i%20%C3%98stfold%20-%20Halden!5e0!3m2!1sen!2sno!4v1700504907628!5m2!1sen!2sno" width="100%" height="50%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+    </div>
+</map> 
+        <!-- Footer -->
         <footer>
-            <!-- Facebook link i footeren -->
-<a href="https://www.facebook.com/">Facebook</a>
-
-<!-- Instagram link i footeren -->
-<a href="https://www.instagram.com/">Instagram</a>
-
-<!-- LinkedIn link i footeren -->
-<a href="https://www.linkedin.com/">LinkedIn</a>
-
- </footer>
-   
-</body> 
-</html>         
+            <a href="index.html" class="logo">
+                <img src="ressurser/logo1.png" alt="Your Logo" style="max-width: 75px; height: auto;">
+            </a>
+            <p class="copyright">Companyrights Companyname 2023</p>
+            <ul class="social-icons">
+                <a href="https://www.facebook.com/" class="facebook"><i class="fab fa-facebook"></i></a>
+                <a href="https://www.instagram.com/" class="instagram"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.linkedin.com/s" class="linkedin"><i class="fab fa-linkedin"></i></a>
+                <!-- Add more social media icons as needed -->
+            </ul>
+        </footer>
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                var backToTopButton = document.querySelector('.back-to-top');
+        
+                window.addEventListener('scroll', function() {
+                    if (window.scrollY > 500) {
+                        backToTopButton.style.display = 'block';
+                    } else {
+                        backToTopButton.style.display = 'none';
+                    }
+                });
+        
+                backToTopButton.addEventListener('click', function() {
+                    window.scrollTo({
+                        top: 0,
+                        behavior: 'smooth'
+                    });
+                });
+            });
+        </script>
+    </body>
+    </html>
+    
+    

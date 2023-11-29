@@ -1,11 +1,11 @@
-body{
+/* body{
     grid-template-rows: auto;
-    margin: 1px auto; /* Center the page content and set top and bottom margin */
+    margin: 1px auto; 
     font-family: Arial, sans-serif;
     font-weight: 1px;
 
-}
-body {
+} */
+/* body {
     display: grid;
     margin: 0;
     grid-template-areas:
@@ -18,24 +18,29 @@ body {
         "footer";   
       
         
-}
+} */
 @media screen and (min-width: 693px) and (max-width: 1600px) {
 
 body {
     display: grid;
     margin: 0;
     grid-template-areas:
+    
         "nav"
         "header"
         "main"
         "section"
-        "aside"
+        "service-section"
         "mark"
-        "footer";   
+        "footer";
+        grid-template-rows: auto;
+        font-family: Arial, sans-serif;
+        font-weight: 1px;   
       
         
 }
 /* ..........alle nav element...............*/
+nav{ grid-area: nav;}
 nav ul {
     list-style-type: none;
     margin: 0;
@@ -125,6 +130,9 @@ header.index .video-container {
     z-index: -1;
 }
 /*..............alle main item.........*/
+main{
+    grid-area: main;
+}
 main h1{
     font-size: 20px;
     font-weight: 1px;
@@ -136,9 +144,20 @@ main p{
     padding-top: 20px;
     
 }
+main{
+    grid-area: main;
+}
+section{
+    grid-area: section;
+}
+.service-section{
+    grid-area: service-section;
+}
+mark{
+    grid-area: mark;
+}
 
 /* ...........  alle aside element ..............*/
-
 
 .service-section h1 {
     font-size: 24px;
@@ -160,8 +179,11 @@ main p{
   
     
 }
+.service-section{
+   grid-area:  service-section;
+}
 .aside-service {
-    grid-area: aside;
+    grid-area: aside-service;
     display: grid;
     grid-template-rows: auto repeat(4,auto);
     grid-template-columns: 1fr, 2fr;
@@ -206,6 +228,7 @@ aside p {
 
 
    footer {
+    grid-area: footer;
     background-color: #333;
     color: white;
     padding: 20px 0;
@@ -257,7 +280,7 @@ aside p {
             "header"
             "main"
             "section"
-            "aside"
+            "service-section"
             "mark"
             "footer";
             grid-template-rows: auto;
@@ -269,8 +292,23 @@ aside p {
         text-align: center;
         grid-area: nav;
     }
- 
-   header{
+    header{
+        grid-area: header;
+    }
+ main{
+    grid-area: main;
+ }
+ section{
+    grid-area: section;
+ }
+ .service-section{grid-area: service-section;}
+ mark{
+    grid-area: mark;
+ }
+ footer{
+    grid-area: footer;
+ }
+   header.index{
     grid-area: header;
     background-color: gray;
    }
@@ -541,7 +579,7 @@ section .btn {
     transition: background-color 0.3s, border-color 0.3s;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 692px) {
     #index-section {
         flex-direction: row; /* Switch back to row layout for larger screens */
     }
@@ -559,25 +597,171 @@ section.btn:hover {
 }
 /* .........Protfolie...........*/
 
-
-.product{
-    position: relative;
-    background-image: url('ressurser/background1.jpg'); /* Replace 'your-background-image.jpg' with the actual path to your background image */
+header#product {
+    background-image: url('ressurser/background.jpg'); 
     background-size: cover;
     background-position: center;
-    background-attachment: fixed; /* Added for a parallax effect */
-    height: 300px; /* Adjust the height as needed */
+    color: #fff; /* Set text color to white or any contrasting color */
     text-align: center;
-    color: white; /* Text color on top of the background image */
+    padding: 100px 0; /* Adjust the padding as needed */
+}
+
+header#product h1 {
+    margin: 10px;
+    font-size: 70px;
+}
+
+/* stayle for Branding -portfolie*/
+
+#main-product h1 {
+    border-bottom: 2px solid rgb(239, 239, 42); 
+    text-align: left;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    margin: 30px;
+    width: 100%;
+}
+#branding-section h2 {
+    border-bottom: 2px solid rgb(234, 234, 97); 
+    margin-bottom: 20px;
+    margin: 30px;
+    width: 100%;
+    padding: 10px;
+    margin-left: 20px;
+    text-align: left;
+}
+#main-product a{
+text-decoration: 0;
+border: 2px solid black; 
+text-align: right;
+color: #000;
+
+
+}
+#main-product {
+text-align: left;
+
+
+}
+/*.............About............*/
+#about-body{
+    display: grid;
+    grid-template-areas:
+       "nav"
+        "about"
+        "service-section" /*aside*/
+        "about-section"
+        "contact"
+        "mark"
+        "footer";
+        grid-template-rows: auto;
+        padding: 2px;
+        font-family: Arial, sans-serif;
+}
+nav{ grid-area: nav;
+}
+
+/*-- all Header style ---subName about---*/
+#about{
+    grid-area: about;
+    background-image: url('ressurser/19862.jpg'); 
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    padding: 100px 0; /* Adjust the padding as needed */
+    margin: 0; /* Remove margin to ensure full-width background */
+    height: 20vh;
+}
+#article-about-header {
+    padding: 10px; /* Adjust the padding as needed */
+    max-width: 700px; /* Set the maximum width of the container */
+    margin: 10px auto; /* Center the container horizontally */
+    position: absolute;
+    background-color: #e5e9ef;
+    top: 50%; /* Align to the vertical center */
+    left: 70%; /* Align to the horizontal center */
+    transform: translate(-50%, -50%); /* Center the container using translation */
+}
+
+.service-section a:hover{
+    background: #000;
+}
+#article-about-header h1,
+#article-about-header p,
+#article-about-header h2{
+             font-size: 18px;
+}
+#article-about-header h1{
+             margin: 10px;
+}
+#article-about-header p{
+            padding: 5px;
+            
+
+}
+#article-about-header a {
+   padding: 10px;
+   margin: 10px;
+   font-size: 16px;
+   color: #000;
+} 
+.hover-link {
+    color: black;
+    background-color: #e6bd43;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.hover-link:hover {
+    color: #e6bd43; /* Change the color on hover */
+}
+/* samme design som index.html har både repose */
+ #service-section{
+    grid-area: service-section;
+
+    
+ }
+ /* section og subName about-section */
+
+#about-section {
+    grid-area: about-section;
+    background-color:#e6bd43;
+    padding: 20px;
+    text-align: center; /* Center all items horizontally */
+}
+    .your-alle-Logo {
+    margin: 20px;
+    padding-bottom: 20px;
+
+}
+
+
+#Your-Logo-1,
+#Your-Logo-2,
+#Your-Logo-3 {
+    margin: 20px;
+    padding-bottom: 20px;
+    height: auto;
+    display: inline-block; /* To make the images inline and responsive */
+    margin: 10px; /* Center the images horizontally */
+}
+
+
+
+ contact{
+    grid-area: contact;
     display: flex;
-    align-items: center;
-    justify-content: center;
-}
 
-h1 {
+ }
+
+ /* alle map design*/
+ map{
+    grid-area: mark;
+    padding: 0; 
     position: relative;
-    z-index: 1; /* Place the h1 tag above the background image */
-}
 
+ }
+ footer{
+    grid-area: footer;
 
-
+ }

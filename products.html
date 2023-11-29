@@ -25,45 +25,87 @@
    <header id="product">
     <h1> Portfolio</h1>
  </header>
-    <main>
-        <ul id="all-section">
+ <style>
+    #branding-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px;
+    background-color: #f5f5f5;
+}
+
+#branding-section h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+figure {
+    margin: 0;
+    text-align: center;
+}
+
+figure img {
+    max-width: 100%;
+    height: auto;
+}
+
+figcaption {
+    margin-top: 10px;
+}
+
+.article-card-1,
+.article-card-2,
+.article-card-3,
+.article-card-4 {
+    flex: 0 1 calc(25% - 20px); /* Adjust the percentage width as needed */
+    margin: 10px;
+}
+
+    </style>
+ 
+</style>
+    <main id="main-product">
            <h1>Explore previous jobs</h1> 
-            <a href="branding-section" class="Branding-button">Branding</a>
-            <a href="design-section" class="Branding-button">Design</a>
-            <a href="development-section" class="Branding-button">Development</a>
-        </ul>   
-    </main>   
-    <section>
+           
+           <a href="#branding-section" class="Branding-button">Branding</a>
+            <a href="#design-section" class="Branding-button">Design</a>
+            <a href="#development-section" class="Branding-button">Development</a>  
+    </main>  
+
+    
+    <section id="branding-section">
             <h2>Branding</h2>
             <figure class="article-card-1">
-                <img src="https://placehold.co/400" alt="Branding 1">
+                <img src="https://placehold.co/400" alt="Branding 1" style="max-width: 350px; min-width: 200px;">
                 <figcaption>
                     <h3>Et harum quidem</h3>
                 </figcaption>
             </figure>
     
             <figure class="article-card-2">
-                <img src="https://placehold.co/400" alt="Branding 2">
+                <img src="https://placehold.co/400" alt="Branding 2" style="max-width: 350px; min-width: 200px;">
                 <figcaption>
                     <h3>Et harum quidem</h3>
                 </figcaption>
             </figure>
     
             <figure class="article-card-3">
-                <img src="https://placehold.co/400" alt="Branding 3">
+                <img src="https://placehold.co/400" alt="Branding 3" style="max-width: 350px; min-width: 200px;">
                 <figcaption>
                     <h3>Et harum quidem</h3>
                 </figcaption>
             </figure>
+            
     
             <figure class="article-card-4">
-                <img src="https://placehold.co/400" alt="Branding 4">
+                <img src="https://placehold.co/400" alt="Branding 4" style="max-width: 350px; min-width: 200px;">
                 <figcaption>
                     <h3>Et harum quidem</h3>
                 </figcaption>
             </figure>
         </section>
-    <aside>
+    <aside id="design-section">
             <h2>Design</h2>
             <figure class="article-card">
                 <img src="design1.jpg" alt="Design 1">
@@ -87,7 +129,7 @@
             </figure>
         </aside>
     
-    <mark>
+    <mark id="development-section">
             <h2>Development</h2>
     
             <figure class="article-card">
@@ -99,13 +141,13 @@
     
             <figure class="article-card">
                 <img src="https://placehold.co/400" alt="Development 2">
+                
                 <figcaption>
                     <h3>Development Article 2</h3>
                 </figcaption>
             </figure>
         </mark>
     <a href="#" class="back-to-top"><i class="fas fa-arrow-up"></i></a>
-       
        
     <!-- Footer -->
     <footer>
@@ -114,9 +156,9 @@
         </a>
         <p class="copyright">Companyrights Companyname 2023</p>
         <ul class="social-icons">
-            <a href="#" class="facebook"><i class="fab fa-facebook"></i></a>
-            <a href="#" class="instagram"><i class="fab fa-instagram"></i></a>
-            <a href="#" class="linkedin"><i class="fab fa-linkedin"></i></a>
+            <a href="https://www.facebook.com/" class="facebook"><i class="fab fa-facebook"></i></a>
+            <a href="https://www.instagram.com/" class="instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.linkedin.com/s" class="linkedin"><i class="fab fa-linkedin"></i></a>
             <!-- Add more social media icons as needed -->
         </ul>
     </footer>
@@ -142,3 +184,4 @@
     </script>
 </body>
 </html>
+
